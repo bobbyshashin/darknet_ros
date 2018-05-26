@@ -9,7 +9,7 @@
   <arg name="yolo_config_path"           default="$(find darknet_ros)/yolo_network_config/cfg"/>
 
   <!-- Load parameters -->
-  <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/ros.yaml"/>
+  <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/stereo_left.yaml"/>
   <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/nsh.yaml"/>
 
   <!-- Start darknet and ros wrapper -->
@@ -18,5 +18,5 @@
     <param name="config_path"           value="$(arg yolo_config_path)" />
   </node>
 
- <!--<node name="republish" type="republish" pkg="image_transport" output="screen" 	args="compressed in:=/front_camera/image_raw raw out:=/camera/image_raw" /> -->
+ <!--<node name="republish" type="republish" pkg="image_transport" output="screen"  args="compressed in:=/front_camera/image_raw raw out:=/camera/image_raw" /> -->
 </launch>

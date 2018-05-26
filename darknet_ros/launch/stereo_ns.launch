@@ -1,0 +1,14 @@
+<launch>
+  <group ns="left">
+      <include file="$(find darknet_ros)/launch/stereo_left.launch">
+          <arg name="namespace" value="left" /> 
+      </include>
+  </group>
+
+  <group ns="right">
+      <include file="$(find darknet_ros)/launch/stereo_right.launch">
+          <arg name="namespace" value="right" /> 
+      </include>
+  </group>
+
+</launch>
